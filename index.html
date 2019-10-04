@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/logo.png">
+    <title>Губин Алексей</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="modal-background modal-vote">
+        <div class="modal-window">
+            <div class="modal-close modal-vote">X</div>
+            <div class="modal-container">
+                <h1>Я голосую за Алексея Губина</h1>
+                <p class="error" id="vote_error"></p>
+                <form class="send_form" id="vote_form">
+                    <div class="form-group">
+                        <label for="vote_name">Как вас зовут? (Фамилия, инициалы)</label>
+                        <input required id="vote_name" placeholder="Иванов И.И." name="name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="vote_email">Куда отправлять сообщения?</label>
+                        <input required id="vote_email" placeholder="example@mail.ru" name="email" type="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="vote_class">В каком классе вы учитесь? (Если вы не ученик, то укажите место работы)</label>
+                        <input required id="vote_class" name="class" placeholder="10-2 класс" type="text">
+                    </div>
+                    <input class="first-button" id="send_vote" type="button" value="Голосовать!">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-background modal-reform">
+        <div class="modal-window">
+            <div class="modal-close modal-reform">X</div>
+            <div class="modal-container">
+                <h1>У меня есть инетересная идея!</h1>
+                <p class="error" id="reform_error"></p>
+                <form class="send_form" id="reform_form">
+                    <div class="form-group">
+                        <label for="reform_name">Как вас зовут? (Фамилия, инициалы)</label>
+                        <input required id="reform_name" placeholder="Иванов И.И." name="name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="reform_email">Куда отправлять сообщения?</label>
+                        <input required id="reform_email" placeholder="example@mail.ru" name="email" type="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="reform_message">Опишите вашу идею</label>
+                        <textarea required placeholder="Сделайте как можно более подробное описание" name="message" id="reform_message"></textarea>
+                    </div>
+                    <input class="first-button" id="send_reform" type="button" value="Отправить идею!">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-background modal-success">
+        <div class="modal-window">
+            <div class="modal-close modal-success">X</div>
+            <div class="modal-container">
+                <p class="success-message" id="success"></p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                    <h2>Выборы в президенты лицея</h2>
+                </div>
+                <ul class="menu">
+                    <li class="menu-element">Обо мне</li>
+                    <li href="#reforms-block" class="menu-element">Реформы</li>
+                    <li href="#contacts" class="menu-element">Контакты</li>
+                </ul>
+            </div>
+            <div class="about-me">
+                <div class="my-photo-container">
+                    <img src="images/my-photo-header.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h1>Привет! Меня зовут Алексей Губин</h1>
+                    <div class="desc-text">
+                        <p>И вот, пришло время рассказать о себе!</p>
+                        <p>Я ученик 10<sup>2</sup> физмат класса.</p>
+                        <p>В основе моей деятельности лежит разработка web-сайтов. Имею большой опыт в создании, продвижении и поддержке проектов. Некоторое время занимался преподавательской деятельностью в сфере информационных технологий. Веду здоровый образ жизни во всех отношениях.</p>
+                        <p>Люблю вкусно покушать ^_^</p>
+                    </div>
+                    <div class="first-button">Я голосую за тебя!</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <div class="main-block">
+            <div class="fold"></div>
+            <div id="reforms-block">
+                <h1>Вопросы волнующие лицей. Возможные решения</h1>
+                <div class="reforms">
+                    <div class="reform">
+                        <div class="reform-img"><img src="images/beznal.jpg" alt=""></div>
+                        <div class="reform-text">
+                            <div class="reform-description">Безналичный рассчет в столовой</div>
+                            <div class="reform-full-description">
+                                <p>Дело в том, что в столовой на данный момент отсутсвует безналичный рассчет, что затрудняет покупку продуктов для некоторых групп учащихся, особенно в условиях "блокады" школы на 20-тиминутной перемены.</p>
+                                <p>Я выведу на обсуждение вопрос о том, чтобы внедрить терминал оплаты в столовую, дабы охватить полный сегмент учащихся.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reform">
+                        <div class="reform-img"><img src="images/rink.jpg" alt=""></div>
+                        <div class="reform-text">
+                            <div class="reform-description">Надоели звонки?</div>
+                            <div class="reform-full-description">
+                                <p>Если в начальных классах идея ввести музыку вместо звонков казалось просто великолепной, то уже к 5-ому классу они начинают повторяться, музыка приедается. В наших силах предложить свою музыку для звонков, естетсвенно в рамках приличия.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reform">
+                        <div class="reform-img"><img src="images/dnevnik.jpg" alt=""></div>
+                        <div class="reform-text">
+                            <div class="reform-description">Любимый Дневник.ру</div>
+                            <div class="reform-full-description">
+                                <p>Не секрет, что дневник.ру во многом не соответствует стандартам современного рынка и при возникновении альтернативы, которая будет действительно развиваться в положительном направлении школы перейдут к конкурентам.</p>
+                                <p>На данный момент я занимаюсь разработкой данной альтернативы, подрубную информацию вы можете получить в
+                                    <a href="docs/dnevnik.docx" target="_blank">прикрепленном файле</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reforms-footer">
+                    <div class="second-button">Предложить идею</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h1>Контакты</h1>
+        <div id="contacts">
+            <div class="contact-container">
+                <div class="contact-img">
+                    <img src="images/contact-img.jpg" alt="">
+                </div>
+                <div class="contact-desc">
+                    <div class="people-name">Губин Алексей</div>
+                    <div class="contacts-list">
+                        <a href="https://vk.com/webmadness" target="_blank" class="contact">vk.com/webmadness</a>
+                        <a href="mailto:alecmei.gubin@yandex.ru" class="contact">alecmei.gubin@yandex.ru</a>
+                    </div>
+                    <div class="first-button">Я голосую за тебя!</div>
+                </div>
+            </div>
+            <h1 class="header-footer-mobile">Есть вопросы? Напиши мне!</h1>
+            <form class="feedback-container" id="feedback_form">
+                <p class="error" id="feedback_error"></p>
+                <input required type="text" name="name" placeholder="Как вас зовут?">
+                <input required type="email" name="email" placeholder="Ваш e-mail">
+                <textarea required name="message" placeholder="Сообщение"></textarea>
+                <div class="second-button" id="send_feedback">Отправить!</div>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
